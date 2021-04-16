@@ -1,0 +1,20 @@
+{
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": "Arno Gourdol",
+  "name": "@mathlive/issue-templates",
+  "private": true,
+  "workspaces": [
+    "templates/*"
+  ],
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/cortex-js/mathlive-issue-templates/issues"
+  },
+  "scripts": {
+    "reset": "rm -rf node_modules; rm -rf tempates/*/node_modules",
+    "test": "yarn jest"
+  }
+}
