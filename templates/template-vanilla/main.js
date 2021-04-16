@@ -31,7 +31,7 @@ const addStyles = (mfe) => {
 const app = document.querySelector("#app");
 app.innerHTML = `
   <h1>Reproduce your Mathlive Bug / Issue below:</h1>
-  <a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation</a>
+  <a href="https://cortexjs.io/docs/mathlive/" target="_blank">Documentation</a>
 `;
 
 const mfe = new mathlive.MathfieldElement();
