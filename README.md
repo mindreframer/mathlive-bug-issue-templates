@@ -14,6 +14,9 @@ $ yarn
 
 # pick, which template suits you more and try to reproduce your bug / issue there
 $ cd templates/template-react
+
+# will start the development server, listening on localhost:3000
+$ yarn dev
 ```
 
 When done, push to Github and post the URL to your repository in the issue description.
