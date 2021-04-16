@@ -2,7 +2,7 @@
 module.exports = {
   verbose: true,
   transform: {
-    "^.+\\.tsx?$": "esbuild-jest",
+    "^.+\\.(tsx|ts|jsx|js)?$": "esbuild-jest",
   },
   moduleNameMapper: {
     "\\.(css|less|sass|scss)$": "<rootDir>/__mocks__/styleMock.js",
