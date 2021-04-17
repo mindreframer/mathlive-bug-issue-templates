@@ -2,32 +2,6 @@ import * as mathlive from "mathlive";
 import "mathlive/dist/mathlive-fonts.css";
 import React, { useCallback, useState, useRef } from "react";
 
-/**
- * Apply styles to MathfieldElement
- * @param mfe
- */
-const addStyles = (mfe: mathlive.MathfieldElement) => {
-  var style = document.createElement("style");
-  style.innerHTML = `
-      /* the top level container */
-      .ML__fieldcontainer {
-        background-color: white;
-        border: 1px #ccc solid;
-        color: black;
-      }
-      /* selection background color */
-      .ML__selection{
-        background-color: #F9FAFB !important;
-      }
-      /* do not show border on focus */
-      :host(:focus), :host(:focus-within) {
-        outline: Highlight auto 0px;    /* For Firefox */
-        outline: -webkit-focus-ring-color auto 0px;
-      }
-      `;
-  mfe.shadowRoot?.appendChild(style);
-};
-
 const configureMathElement = (mfe: mathlive.MathfieldElement) => {
   mfe.setOptions({
     smartFence: true,
@@ -74,7 +48,6 @@ export const MathElement = ({ value }: MathElementProps) => {
     if (node !== null) {
       if (!configured) {
         configureMathElement(mfe);
-        addStyles(mfe);
         setConfigured(true);
       }
       mfe.setValue(curval);
@@ -94,7 +67,7 @@ export const MathElement = ({ value }: MathElementProps) => {
   return (
     <div>
       <div style={{ display: "flex", marginBottom: "10px" }}>
-        <div ref={elRef}></div>
+        <div className="mathfield-element" ref={elRef}></div>
         <button onClick={doAction}>ACTION</button>
         <input
           type="text"
