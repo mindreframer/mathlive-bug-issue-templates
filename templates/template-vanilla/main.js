@@ -10,6 +10,6 @@ app.innerHTML = `
 `;
 
 const mfe = new mathlive.MathfieldElement();
-mfe.value = `\\sigma=\\sqrt[]{\\frac{1}{N}\\sum ^N_{i=1}(x_i-\\mu)^2}\\text{^^20where^^20}\\mu=\\frac{1}{N}\\sum ^N_{i=1}x_i`;
+mfe.value = `\\sigma=\\sqrt[]{\\frac{1}{N}\\sum ^N_{i=1}(x_i-\\mu)^2}\\text{ 20where }\\mu=\\frac{1}{N}\\sum ^N_{i=1}x_i`;
 const div = document.querySelector("#math-input");
 div.appendChild(mfe);
